@@ -1,35 +1,29 @@
 {
-  "name": "jate",
+  "name": "text-editor",
   "version": "1.0.0",
-  "description": "",
+  "engines:": {
+    "node": "14.17.3",
+    "npm": "6.14.13"
+  },
+  "description": "just another text editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "idb": "^7.1.1",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vsoto7697/PWA-Challenge-Text-Editor.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Vsoto7697/PWA-Challenge-Text-Editor/issues"
-  },
-  "homepage": "https://github.com/Vsoto7697/PWA-Challenge-Text-Editor#readme"
+  }
 }
