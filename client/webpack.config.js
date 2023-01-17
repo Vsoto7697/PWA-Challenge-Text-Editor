@@ -22,12 +22,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Webpack plugin that generates our html file and injects our bundles
+      // Webpack add-on that creates our HTML file and injects our bundles
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'jate'
       }),
-      // Injects our custom servie worker
+      // injects our specialized workforce
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -55,7 +55,7 @@ module.exports = () => {
     ],
 
     module: {
-      // CSS Loaders
+      // Loads css
       rules: [
         {
           test: /\.css$/i,
