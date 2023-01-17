@@ -16,19 +16,19 @@ const initdb = async () =>
 export const putDb = async (content)  => {
   console.log('PUT to the database');
 
-  // Create a connection to the database database and version we want to use.
+  // Establish a connection to the desired database and version.
   const contactDb = await openDB('jate', 1);
 
-  // Create a new transaction and specify the database and data privileges.
+  // Specify the database and data privileges when creating a new transaction.
   const tx = contactDb.transaction('jate', 'readwrite');
 
-  // Open up the desired object store.
+  // Get the desired object storage open.
   const store = tx.objectStore('jate');
 
   // Use the .add() method on the store and pass in the content.
   const request = store.put({ id: 1, value: content });
 
-  // Get confirmation of the request.
+  // Obtain a response to the request.
   const result = await request;
   console.log('🚀 - data saved to the database', result);
 };
@@ -37,19 +37,19 @@ export const putDb = async (content)  => {
 export const getDb = async () => {
   console.log('GET from the database');
 
-  // Create a connection to the database database and version we want to use.
+  // Establish a connection to the desired database and version.
   const contactDb = await openDB('jate', 1);
 
-  // Create a new transaction and specify the database and data privileges.
+  // The database and data privileges must be specified when creating a new transaction.
   const tx = contactDb.transaction('jate', 'readonly');
 
-  // Open up the desired object store.
+  // Get the desired object storage open.
   const store = tx.objectStore('jate');
 
-  // Use the .getAll() method to get all data in the database.
+  // To access all the data in the database, use the.getAll() method.
   const request = store.getAll();
 
-  // Get confirmation of the request.
+  // Obtain a response to the request.
   const result = await request;
   console.log('result.value', result);
   return result?.value;
