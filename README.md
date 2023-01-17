@@ -20,20 +20,12 @@ Project is created with:
 
 ## Installation
 
-Install this project locally using npm to run it:
-
-```
-npm install
-```
+The user only needs to clone the repository and then issue the command "npm install" to install the project's dependencies. Since they are all part of the package, this will install all required dependencies. json.
 
 ## Usage
 
-The following command will be used to launch the application following the installation of npm packages:
-
-```
-npm start
-```
-
+To use this app, just click the link for the deployed app at the top of this readme to open it in the browser. The user can access the link and click the "install" button in the top left corner of the page for offline use.
+[Website!][link](https://youtu.be/NmuiCTdzXak)
 
 #### Screenshot
 
